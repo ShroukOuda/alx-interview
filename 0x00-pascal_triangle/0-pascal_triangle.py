@@ -4,18 +4,14 @@
 """
 
 
-def factorial_iterative(n):
-    result = 1
-    for i in range(1, n + 1):
-        result *= i
-    return result
-
 def pascal_triangle(rows):
     traingle_list = []
     for n in range(rows):
         row_list = []
+        nCr = 1
         for r in range(n + 1):
-            nCr = factorial_iterative(n) // (factorial_iterative(n - r) * factorial_iterative(r))
+            if r > 0:
+                nCr = nCr * (n - r + 1) // r
             row_list.append(nCr)
         traingle_list.append(row_list)
     return traingle_list
