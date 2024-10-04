@@ -5,6 +5,11 @@
 
 
 def pascal_triangle(rows):
+    """
+        Returns a list of integers
+        representing the Pascal Triangle of n
+        returns empty list if n <= 0
+    """
     traingle_list = []
     for n in range(rows):
         row_list = []
